@@ -1,0 +1,19 @@
+*
+{
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body
+{
+background-color: gray;
+background-image: bluecifer.jpg;
+}
+
+h1
+{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+}
+
