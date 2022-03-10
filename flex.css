@@ -1,0 +1,22 @@
+body {
+    font-family: fantasy;
+}
+
+h1 {
+    text-align: center;
+}
+
+#container {
+    background-color: #fefae0;
+    width: 90%;
+    height: 500px;
+    margin: 0 auto;
+    border: 5px solid #d4a373;
+    display: flex;
+}
+
+#container div {
+    width: 200px;
+    height: 200px;
+    
+}
