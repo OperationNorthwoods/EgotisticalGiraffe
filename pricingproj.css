@@ -127,11 +127,34 @@ body {
     padding: 25px 35px;
     text-decoration: none;
     display: inline-block;
+    transition: background-color 200ms ease-in-out;
 }
 
+.pricing-button:focus, .pricing-button:hover {
+    background-color:#9dd1ff;
+}
+
+.pricing-button.is-featured {
+    background-color: #48aaff;
+    color: white;
+}
+
+.pricing-button.is-featured:hover, .pricing-button.is-featured:focus {
+    background-color: #269aff;
+}
 
 @media (min-width: 768px) {
     .panel {
             flex-direction: row;
     }
+    .pricing-plan {
+        border-bottom: none;
+        border-right: solid 1px #e1f1ff;
+        padding: 25px 50px;
+    }
+    .pricing-plan:last-child {
+        border-right: none;
+    }
 }
+
+/* final code */
