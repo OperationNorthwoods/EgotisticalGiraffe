@@ -1,0 +1,21 @@
+.container-1 {
+    height: 500px;
+    width: 1000px;
+    border: 3px solid red;
+    position: relative;
+}
+
+.container-2 {
+    position: absolute;
+    top: 225px;
+    bottom: 225px;
+    left: 425px;
+    right: 425px;
+}
+
+.centerthisbutton {
+    /* display: flex; */
+    text-align: center;
+    height: 50px;
+    width: 150px;
+}
