@@ -1,3 +1,5 @@
+/* attempt 1: manually calculating pixels */
+
 .container-1 {
     height: 500px;
     width: 1000px;
@@ -19,3 +21,5 @@
     height: 50px;
     width: 150px;
 }
+
+/* attempt 2: flexbox & grid */
