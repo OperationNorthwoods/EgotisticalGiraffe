@@ -16,10 +16,15 @@ const p2 = {
 }
 
 function isGameOver(input) {
-    if (p1.score === playto.value || p2.score === playto.value) {
+    const s1 = p1.score
+    const s2 = p2.score
+    if (p1.score != playto.value || p2.score != playto.value) {
+        return console.log('game continues')
+    } else if (playto.value <= s1 || playto.value <= s2) {
         p1Button.setAttribute('disabled', '')
         p2Button.setAttribute('disabled', '')
-    } else { }
+        return console.log('game ends')
+    }
 };
 
 p1Button.addEventListener('click', function (e) {
@@ -35,8 +40,8 @@ p2Button.addEventListener('click', function (e) {
 });
 
 reset.addEventListener('click', function (e) {
-    p1.score === 0;
+    p1.score = '0';
     p1Display.innerText = p1.score
-    p2.score === 0;
+    p2.score = '0';
     p2Display.innerText = p2.score
 });
