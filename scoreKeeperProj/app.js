@@ -15,34 +15,44 @@ const p2 = {
 
 }
 
-function isGameOver(input) {
-    const s1 = parseInt(p1.score)
-    const s2 = parseInt(p2.score)
+function isGameOver() {
+    const s1 = p1.score
+    const s2 = p2.score
     const v1 = parseInt(playto.value)
-    if (p1.score != playto.value || p2.score != playto.value) {
-        return console.log('game continues')
-    } else if (v1 <= s1 || v1 <= s2) {
+    if (s1 >= v1 || s2 >= v1) {
         p1Button.disabled = true;
         p2Button.disabled = true;
+        if (s1 >= v1) {
+            p1Display.style.color = 'green'
+            p2Display.style.color = 'red'
+        } else {
+            p2Display.style.color = 'green'
+            p1Display.style.color = 'red'
+        }
         return console.log('game ends')
+    } else {
+        return console.log('game continues')
     }
 };
 
 p1Button.addEventListener('click', function (e) {
+    p1.score++;
+    p1Display.innerText = p1.score;
     isGameOver();
-    p1.score++
-    p1Display.innerText = p1.score
 });
 
 p2Button.addEventListener('click', function (e) {
+    p2.score++;
+    p2Display.innerText = p2.score;
     isGameOver();
-    p2.score++
-    p2Display.innerText = p2.score
 });
 
 reset.addEventListener('click', function (e) {
     p1.score = 0;
-    p1Display.innerText = p1.score
+    p1Display.innerText = p1.score;
     p2.score = 0;
-    p2Display.innerText = p2.score
+    p2Display.innerText = p2.score;
+    p1Button.disabled = false;
+    p2Button.disabled = false;
+    playto.value = '3';
 });
