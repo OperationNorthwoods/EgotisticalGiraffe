@@ -35,6 +35,17 @@ function isGameOver() {
     }
 };
 
+function resetScore() {
+    p1.score = 0;
+    p1Display.innerText = p1.score;
+    p2.score = 0;
+    p2Display.innerText = p2.score;
+    p1Button.disabled = false;
+    p2Button.disabled = false;
+    p2Display.style.color = 'black'
+    p1Display.style.color = 'black'
+}
+
 p1Button.addEventListener('click', function (e) {
     p1.score++;
     p1Display.innerText = p1.score;
@@ -48,11 +59,10 @@ p2Button.addEventListener('click', function (e) {
 });
 
 reset.addEventListener('click', function (e) {
-    p1.score = 0;
-    p1Display.innerText = p1.score;
-    p2.score = 0;
-    p2Display.innerText = p2.score;
-    p1Button.disabled = false;
-    p2Button.disabled = false;
+    resetScore();
     playto.value = '3';
 });
+
+playto.addEventListener('change', function () {
+    resetScore();
+})
