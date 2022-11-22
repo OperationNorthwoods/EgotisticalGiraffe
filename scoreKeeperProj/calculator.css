@@ -13,13 +13,14 @@ html body {
     background-color: white;
     width: 400px;
     height: 600px;
-    grid-template-columns: 10% 10% 10% 10% 10%;
+    grid-template-columns: 33% 33% 33%;
     grid-template-rows: auto;
     grid-template-areas:
-        "a a a b b b c c c"
-        "d d d e e e f f f"
-        "g g g h h h i i i"
-        "j j j j . k k k k";
+        "z z z"
+        "a b c"
+        "d e f"
+        "g h i"
+        "j . k";
 }
 
 .item {
@@ -69,4 +70,9 @@ html body {
 
 #item10 {
     grid-area: k;
+}
+
+#item11 {
+    grid-area: z;
+    justify-items: center;
 }
