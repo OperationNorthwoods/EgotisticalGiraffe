@@ -13,20 +13,30 @@ html body {
     background-color: rgb(177, 177, 177);
     width: 400px;
     height: 600px;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: auto;
     grid-template-areas:
-        "z z z"
-        "a b c"
-        "d e f"
-        "g h i"
-        "j . k";
+        "a a a a"
+        "a a a a"
+        "a a a a"
+        "b c d e"
+        "f g h i"
+        "j k l m"
+        "n o p q"
+        "r r s t"
 }
 
-.item {
+.container button {
     color: red;
     font-size: 50px;
+    /* border-radius: 40%; */
 }
+
+/* .container #screen {
+    color: white;
+    font-size: 100px;
+    background-color: black;
+} */
 
 #item0 {
     color: white;
@@ -85,7 +95,46 @@ html body {
 }
 
 #item11 {
-    grid-area: z;
+    grid-area: l;
     background-color: white;
-    /* justify-items: center; */
+}
+
+#item12 {
+    grid-area: m;
+    background-color: burlywood;
+}
+
+#item13 {
+    grid-area: n;
+    background-color: gold;
+}
+
+#item14 {
+    grid-area: o;
+    background-color: goldenrod;
+}
+
+#item15 {
+    grid-area: p;
+    background-color: fuchsia;
+}
+
+#item16 {
+    grid-area: q;
+    background-color: khaki;
+}
+
+#item17 {
+    grid-area: r;
+    background-color: lemonchiffon;
+}
+
+#item18 {
+    grid-area: s;
+    background-color: lawngreen;
+}
+
+#item19 {
+    grid-area: t;
+    background-color: seagreen;
 }
