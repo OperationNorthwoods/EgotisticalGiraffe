@@ -11,8 +11,12 @@ html body {
     place-items: center;
     justify-content: center;
     background-color: rgb(177, 177, 177);
-    width: 400px;
-    height: 600px;
+    margin: 10px;
+    padding: 10px;
+    gap: 5px;
+    width: 390px;
+    height: 700px;
+    /* gap: 10px; */
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: auto;
     grid-template-areas:
@@ -23,10 +27,10 @@ html body {
         "f g h i"
         "j k l m"
         "n o p q"
-        "r r s t"
+        "r r s t";
 }
 
-.container button {
+button {
     color: red;
     font-size: 50px;
     /* border-radius: 40%; */
@@ -42,99 +46,162 @@ html body {
     color: white;
     grid-area: a;
     background-color: red;
+    width: 100%;
+    height: 100%;
+    font-size: 100px;
+    /* margin: 5px; */
+    padding: 2.5px;
+    padding-top: 10px;
 }
 
 #item1 {
     grid-area: b;
     background-color: orange;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 #item2 {
     grid-area: c;
     background-color: yellow;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 #item3 {
     grid-area: d;
     background-color: green;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 #item4 {
     grid-area: e;
     background-color: blue;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 #item5 {
     grid-area: f;
     background-color: blueviolet;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 #item6 {
     grid-area: g;
     background-color: indigo;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 #item7 {
     grid-area: h;
     background-color: violet;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 #item8 {
     grid-area: i;
     background-color: pink;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 #item9 {
     grid-area: j;
     background-color: black;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 #item10 {
     grid-area: k;
     background-color: tan;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 #item11 {
     grid-area: l;
     background-color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 #item12 {
     grid-area: m;
     background-color: burlywood;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 #item13 {
     grid-area: n;
     background-color: gold;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 #item14 {
     grid-area: o;
     background-color: goldenrod;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 #item15 {
     grid-area: p;
     background-color: fuchsia;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 #item16 {
     grid-area: q;
     background-color: khaki;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 #item17 {
     grid-area: r;
     background-color: lemonchiffon;
+    width: 100%;
+    height: 100%;
+    border-radius: 45px;
 }
 
 #item18 {
     grid-area: s;
     background-color: lawngreen;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 #item19 {
     grid-area: t;
     background-color: seagreen;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
