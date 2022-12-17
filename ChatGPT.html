@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <title>My Steam Time Played Chart</title>
+    <style>
+        /* Add some styling for the chart container */
+        #chart {
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.2.0/d3.min.js"></script>
+</head>
+
+<body>
+    <div id="chart"></div>
+    <script>
+      // Make a request to the Steam API to get the time played data
+      const request = new XMLHttpRequest();
+      request.open('GET', 'https://api.steampowered.com/IPlayerService/GetRecentlyPlayedGames/v0001/', true);
+      request.setRequestHeader('Content-Type', 'application/json');
+      request.send(`key=your-api-key&steamid=your-steam-user-id`);
+      request.onload = function() {
+        if (this.status >= 200 && this.status < 400) {
+          // The request was successful
+          const data = JSON.parse(this.response);
+          const timePlayed = data.response.games[0].playtime_forever;
+
+          // Use D3.js to create and customize the chart
+          const margin = { top: 20, right: 20, bottom: 30, left: 50 };
+          const width = 500 - margin.left - margin.right;
+          const height = 300 - margin.top - margin.bottom;
+
+          const x = d3.scaleTime()
+            .range([0, width]);
+
+          const y = d3.scaleLinear()
+            .range([height, 0]);
+
+          const chart = d3.select('#chart')
+            .append('svg')
+              .attr('width', width + margin.left + margin.right)
+              .attr('height', height + margin.top + margin.bottom)
+            .append('g')
+              .attr('transform', `translate(${margin.left}, ${margin.top})`);
+
+          chart.append('rect')
+            .attr('x', 0)
+            .attr('y', 0)
+            .attr('width', width)
+            .attr('height', height)
+            .style('fill', '#eee');
+
+          chart.append('text')
+            .attr('x', width / 2)
+            .attr('y', 0 - (margin.top / 2))
+            .style('text-anchor', 'middle')
+            .text('Time Played (hours)');
+
+          chart.append('text')
+            .attr('transform', `translate(${width/2}, ${height + margin.bottom})`)
+            .style('text-anchor', 'middle')
+            .text('
